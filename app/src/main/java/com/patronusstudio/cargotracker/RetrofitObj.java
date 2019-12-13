@@ -1,5 +1,7 @@
 package com.patronusstudio.cargotracker;
 
+import com.patronusstudio.cargotracker.Interface.JsonApi;
+import com.patronusstudio.cargotracker.Interface.modelSend;
 import com.patronusstudio.cargotracker.model.default_model;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -9,9 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitObj {
 
-    private modelSend modelSend;
+    private com.patronusstudio.cargotracker.Interface.modelSend modelSend;
 
-    RetrofitObj(modelSend modelSend){
+    public RetrofitObj(modelSend modelSend){
         this.modelSend=modelSend;
     }
 

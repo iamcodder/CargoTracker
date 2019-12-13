@@ -1,4 +1,4 @@
-package com.patronusstudio.cargotracker;
+package com.patronusstudio.cargotracker.Interface;
 
 import com.patronusstudio.cargotracker.model.default_model;
 

@@ -1,12 +1,15 @@
 package com.patronusstudio.cargotracker.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class default_model implements Serializable {
+public class default_model implements Parcelable {
 
     @Expose
     @SerializedName("cargoes")
@@ -41,6 +44,21 @@ public class default_model implements Serializable {
     @Expose
     @SerializedName("target_cargoes_info")
     private target_cargoes_info target_cargoes_info;
+
+    protected default_model(Parcel in) {
+    }
+
+    public static final Creator<default_model> CREATOR = new Creator<default_model>() {
+        @Override
+        public default_model createFromParcel(Parcel in) {
+            return new default_model(in);
+        }
+
+        @Override
+        public default_model[] newArray(int size) {
+            return new default_model[size];
+        }
+    };
 
     public void setCargoes(com.patronusstudio.cargotracker.model.cargoes cargoes) {
         this.cargoes = cargoes;
@@ -126,7 +144,16 @@ public class default_model implements Serializable {
         return target_address;
     }
 
-    public com.patronusstudio.cargotracker.model.target_cargoes_info getTarget_cargoes_info() {
+    public target_cargoes_info getTarget_cargoes_info() {
         return target_cargoes_info;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
     }
 }

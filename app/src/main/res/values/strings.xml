@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CargoTracker</string>
+    <string name="tracking_number">Tracking Number</string>
 </resources>

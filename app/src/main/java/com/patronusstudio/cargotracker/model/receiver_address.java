@@ -1,9 +1,12 @@
 package com.patronusstudio.cargotracker.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class receiver_address {
+public class receiver_address implements Parcelable {
 
     @Expose
     @SerializedName("city")
@@ -20,6 +23,40 @@ public class receiver_address {
     @Expose
     @SerializedName("id")
     private String id;
+
+    protected receiver_address(Parcel in) {
+        city = in.readString();
+        district = in.readString();
+        street = in.readString();
+        neighborhood = in.readString();
+        id = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(city);
+        dest.writeString(district);
+        dest.writeString(street);
+        dest.writeString(neighborhood);
+        dest.writeString(id);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<receiver_address> CREATOR = new Creator<receiver_address>() {
+        @Override
+        public receiver_address createFromParcel(Parcel in) {
+            return new receiver_address(in);
+        }
+
+        @Override
+        public receiver_address[] newArray(int size) {
+            return new receiver_address[size];
+        }
+    };
 
     public String getCity() {
         return city;
