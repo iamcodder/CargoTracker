@@ -11,9 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.InfoActivity"
-            android:theme="@style/TransparentCompat_Cargo" ></activity>
-        <activity android:name=".Activity.CargoDetailed" />
+        <activity android:name=".Activity.CargoDetailed"></activity>
         <activity
             android:name=".Activity.LoadActivity"
             android:theme="@style/TransparentCompat" />

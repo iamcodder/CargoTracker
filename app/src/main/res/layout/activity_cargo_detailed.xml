@@ -1,139 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_header"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:orientation="vertical">
+    tools:context=".Activity.CargoDetailed">
 
-    <ImageView
-        android:id="@+id/img_cargo_box"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/cargobox"
-        app:layout_constraintBottom_toTopOf="@+id/img_receiver_info"
-        app:layout_constraintEnd_toStartOf="@+id/img_sender_info"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Cargo Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_cargo_box"
-        app:layout_constraintStart_toStartOf="@+id/img_cargo_box"
-        app:layout_constraintTop_toBottomOf="@+id/img_cargo_box" />
-
-    <ImageView
-        android:id="@+id/img_sender_info"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/humanblu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_cargo_box"
-        app:layout_constraintTop_toTopOf="@+id/img_cargo_box" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Sender Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_sender_info"
-        app:layout_constraintStart_toStartOf="@+id/img_sender_info"
-        app:layout_constraintTop_toBottomOf="@+id/img_sender_info" />
-    <!--2.satır-->
-
-    <ImageView
-        android:id="@+id/img_receiver_info"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/humanyel"
-        app:layout_constraintBottom_toTopOf="@+id/img_back"
-        app:layout_constraintEnd_toStartOf="@+id/img_outlet_center"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_cargo_box" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Receiver Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_receiver_info"
-        app:layout_constraintStart_toStartOf="@+id/img_receiver_info"
-        app:layout_constraintTop_toBottomOf="@+id/img_receiver_info" />
-
-    <ImageView
-        android:id="@+id/img_outlet_center"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/warehouse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_receiver_info"
-        app:layout_constraintTop_toTopOf="@+id/img_receiver_info" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Outlet Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_outlet_center"
-        app:layout_constraintStart_toStartOf="@+id/img_outlet_center"
-        app:layout_constraintTop_toBottomOf="@+id/img_outlet_center" />
-
-    <!--3.satır-->
-
-    <ImageView
-        android:id="@+id/img_target_center"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/senderadr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/img_back"
-        app:layout_constraintTop_toTopOf="@+id/img_back" />
-
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Target Info"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_target_center"
-        app:layout_constraintStart_toStartOf="@+id/img_target_center"
-        app:layout_constraintTop_toBottomOf="@+id/img_target_center" />
-
-    <ImageView
-        android:id="@+id/img_back"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/back"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timeline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:endLineColor="@color/colorBackgroundGrey"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/img_target_center"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_receiver_info" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Back"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/img_back"
-        app:layout_constraintStart_toStartOf="@+id/img_back"
-        app:layout_constraintTop_toBottomOf="@+id/img_back" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineWidth="2dp"
+        app:markerSize="20dp"
+        app:startLineColor="@color/colorBackgroundGrey" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

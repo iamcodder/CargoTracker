@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface JsonApi {
 
-    @GET("kargoTrack.php")
+    @GET("android/fetch.php")
     Call<default_model> getData(@Query("tracking_number") String kargo_numarası);
 
 }

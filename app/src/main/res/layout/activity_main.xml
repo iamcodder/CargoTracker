@@ -61,7 +61,7 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:gravity="center"
         android:hint="@string/tracking_number"
-        android:inputType="number"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toEndOf="@+id/img_edx_traking_number"

@@ -28,9 +28,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
     implementation 'com.airbnb.android:lottie:3.3.1'
     implementation 'com.github.mohammadatif:Animatoo:master'
-    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+    implementation 'com.github.vipulasri:timelineview:1.1.2'
 
 
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'

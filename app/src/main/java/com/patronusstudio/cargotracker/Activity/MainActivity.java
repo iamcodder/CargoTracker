@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.patronusstudio.cargotracker.R;
-import com.patronusstudio.cargotracker.RetrofitObj;
-import com.patronusstudio.cargotracker.model.default_model;
-import com.patronusstudio.cargotracker.Interface.modelSend;
 
 
 public class MainActivity extends AppCompatActivity  {
@@ -29,7 +25,6 @@ public class MainActivity extends AppCompatActivity  {
 
         button = findViewById(R.id.button);
         edx=findViewById(R.id.edx_tracking_number);
-        edx.setText("79442698394");
 
 
         button.setOnClickListener(new View.OnClickListener() {

@@ -8,15 +8,13 @@ import com.google.gson.annotations.SerializedName;
 
 public class target_center implements Parcelable {
 
-    @Expose
-    @SerializedName("address")
-    private String address;
-    @Expose
-    @SerializedName("cargoes_info")
-    private String cargoes_info;
+
     @Expose
     @SerializedName("phone")
     private String phone;
+    @Expose
+    @SerializedName("address")
+    private String address;
     @Expose
     @SerializedName("name")
     private String name;
@@ -25,25 +23,10 @@ public class target_center implements Parcelable {
     private String id;
 
     protected target_center(Parcel in) {
-        address = in.readString();
-        cargoes_info = in.readString();
         phone = in.readString();
+        address = in.readString();
         name = in.readString();
         id = in.readString();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(address);
-        dest.writeString(cargoes_info);
-        dest.writeString(phone);
-        dest.writeString(name);
-        dest.writeString(id);
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
     }
 
     public static final Creator<target_center> CREATOR = new Creator<target_center>() {
@@ -58,16 +41,12 @@ public class target_center implements Parcelable {
         }
     };
 
-    public String getAddress() {
-        return address;
-    }
-
-    public String getCargoes_info() {
-        return cargoes_info;
-    }
-
     public String getPhone() {
         return phone;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public String getName() {
@@ -76,6 +55,18 @@ public class target_center implements Parcelable {
 
     public String getId() {
         return id;
+    }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(phone);
+        dest.writeString(address);
+        dest.writeString(name);
+        dest.writeString(id);
     }
 }

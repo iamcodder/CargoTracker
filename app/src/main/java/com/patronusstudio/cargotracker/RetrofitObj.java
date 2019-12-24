@@ -3,6 +3,7 @@ package com.patronusstudio.cargotracker;
 import com.patronusstudio.cargotracker.Interface.JsonApi;
 import com.patronusstudio.cargotracker.Interface.modelSend;
 import com.patronusstudio.cargotracker.model.default_model;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -18,7 +19,7 @@ public class RetrofitObj {
     }
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("https://iamcodder.com/retrofit/")
+            .baseUrl("https://oguzhan.dev/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
