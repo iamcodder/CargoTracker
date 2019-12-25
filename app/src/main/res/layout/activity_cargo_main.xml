@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CargoMain"
+    android:background="@drawable/main_header">
+
+    <ImageView
+        android:id="@+id/img_alici_bilglieri"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/humanyel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_kargo_durumu"
+        app:layout_constraintTop_toBottomOf="@+id/img_gonderen_bilgileri" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alıcı Bilgileri"
+        app:layout_constraintEnd_toEndOf="@+id/img_alici_bilglieri"
+        app:layout_constraintStart_toStartOf="@+id/img_alici_bilglieri"
+        app:layout_constraintTop_toBottomOf="@+id/img_alici_bilglieri" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kargo Bilgileri"
+        app:layout_constraintEnd_toEndOf="@+id/img_kargo_bilgileri"
+        app:layout_constraintStart_toStartOf="@+id/img_kargo_bilgileri"
+        app:layout_constraintTop_toBottomOf="@+id/img_kargo_bilgileri" />
+
+    <ImageView
+        android:id="@+id/img_kargo_bilgileri"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cargobox"
+        app:layout_constraintBottom_toTopOf="@+id/img_kargo_durumu"
+        app:layout_constraintEnd_toStartOf="@+id/img_gonderen_bilgileri"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_gonderen_bilgileri"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/humanblu"
+        app:layout_constraintBottom_toTopOf="@+id/img_alici_bilglieri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_kargo_bilgileri"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView2"
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gönderen Bilgileri"
+        app:layout_constraintEnd_toEndOf="@+id/img_gonderen_bilgileri"
+        app:layout_constraintStart_toStartOf="@+id/img_gonderen_bilgileri"
+        app:layout_constraintTop_toBottomOf="@+id/img_kargo_bilgileri" />
+
+
+    <ImageView
+        android:id="@+id/img_kargo_durumu"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/senderadr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_alici_bilglieri"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_kargo_bilgileri" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/TextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Son Durum"
+        app:layout_constraintEnd_toEndOf="@+id/img_kargo_durumu"
+        app:layout_constraintStart_toStartOf="@+id/img_kargo_durumu"
+        app:layout_constraintTop_toBottomOf="@+id/img_kargo_durumu" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

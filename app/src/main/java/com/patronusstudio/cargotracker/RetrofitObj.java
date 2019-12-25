@@ -1,8 +1,12 @@
 package com.patronusstudio.cargotracker;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.patronusstudio.cargotracker.Interface.JsonApi;
-import com.patronusstudio.cargotracker.Interface.modelSend;
 import com.patronusstudio.cargotracker.model.default_model;
+import com.patronusstudio.cargotracker.model.personnel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -10,12 +14,20 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.patronusstudio.cargotracker.Interface.modelSend.sendUser;
+import com.patronusstudio.cargotracker.Interface.modelSend.send;
+
 public class RetrofitObj {
 
-    private com.patronusstudio.cargotracker.Interface.modelSend modelSend;
+    send modelSend;
+    sendUser modelSendUser;
 
-    public RetrofitObj(modelSend modelSend){
+    public RetrofitObj(@NonNull send modelSend){
         this.modelSend=modelSend;
+    }
+
+    public RetrofitObj(@NonNull sendUser modelSendUser){
+        this.modelSendUser=modelSendUser;
     }
 
     Retrofit retrofit = new Retrofit.Builder()
@@ -44,6 +56,29 @@ public class RetrofitObj {
 
             @Override
             public void onFailure(Call<default_model> call, Throwable t) {
+
+            }
+        });
+    }
+
+    public void getUser(String email, final String password){
+        Call<personnel> user=jsonApi.getUser(email,password);
+
+        user.enqueue(new Callback<personnel>() {
+            @Override
+            public void onResponse(Call<personnel> call, Response<personnel> response) {
+                if(response.isSuccessful()){
+                    personnel personnel =response.body();
+                    if(personnel!=null)
+                    modelSendUser.sendUser(personnel);
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<personnel> call, Throwable t) {
+                Log.d("Sülo ",t.getLocalizedMessage().toString()+" ");
+
             }
         });
     }

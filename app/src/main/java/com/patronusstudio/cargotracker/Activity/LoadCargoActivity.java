@@ -6,25 +6,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.patronusstudio.cargotracker.Interface.modelSend;
 import com.patronusstudio.cargotracker.R;
 import com.patronusstudio.cargotracker.RetrofitObj;
-import com.patronusstudio.cargotracker.model.cargoes;
 import com.patronusstudio.cargotracker.model.default_model;
 
 import java.util.ArrayList;
 
-public class LoadActivity extends AppCompatActivity implements modelSend {
+public class LoadCargoActivity extends AppCompatActivity implements modelSend.send {
 
     private RetrofitObj retrofitObj;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_load);
+        setContentView(R.layout.activity_load_cargo);
 
         retrofitObj = new RetrofitObj(this);
 
@@ -40,9 +38,9 @@ public class LoadActivity extends AppCompatActivity implements modelSend {
     }
 
     @Override
-    public void send(default_model model) {
+    public void send(@NonNull default_model model) {
         if(model.getCargoes()!=null){
-            Intent nIntent=new Intent(this,CargoDetailed.class);
+            Intent nIntent=new Intent(this, CargoMain.class);
             nIntent.putExtra("cargoes",model.getCargoes());
             nIntent.putExtra("outlet_center",model.getOutlet_center());
             nIntent.putExtra("target_center",model.getTarget_center());

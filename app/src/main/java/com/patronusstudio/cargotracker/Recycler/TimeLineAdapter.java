@@ -14,11 +14,11 @@ import com.patronusstudio.cargotracker.model.cargoes_movement;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.TimeLineViewHolder> {
+public class TimeLineAdapter extends RecyclerView.Adapter<TimeLineAdapter.TimeLineViewHolder> {
 
     private List<cargoes_movement> list;
 
-    public Adapter(List<cargoes_movement> list) {
+    public TimeLineAdapter(List<cargoes_movement> list) {
         this.list = list;
     }
 

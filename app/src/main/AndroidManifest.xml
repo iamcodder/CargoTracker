@@ -11,9 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.CargoDetailed"></activity>
+        <activity android:name=".Activity.UserHome"></activity>
         <activity
-            android:name=".Activity.LoadActivity"
+            android:name=".Activity.UserLoginActivity"
+            android:theme="@style/TransparentCompat" />
+        <activity android:name=".Activity.LoadUserActivity" />
+        <activity
+            android:name=".Activity.CargoReceiver"
+            android:theme="@style/TransparentCompat" />
+        <activity
+            android:name=".Activity.CargoSender"
+            android:theme="@style/TransparentCompat" />
+        <activity
+            android:name=".Activity.CargoInfo"
+            android:theme="@style/TransparentCompat" />
+        <activity android:name=".Activity.CargoMain" />
+        <activity
+            android:name=".Activity.CargoTimeline"
+            android:theme="@style/TransparentCompat" />
+        <activity
+            android:name=".Activity.LoadCargoActivity"
             android:theme="@style/TransparentCompat" />
         <activity android:name=".Activity.MainActivity">
             <intent-filter>

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:layout_height="wrap_content">
 
     <com.github.vipulasri.timelineview.TimelineView
         android:id="@+id/timeline"
@@ -14,8 +12,6 @@
         android:layout_height="match_parent"
         app:markerSize="20dp"
         app:lineWidth="3dp"
-        app:startLineColor="@color/colorAccent"
-        app:endLineColor="@color/colorAccent"
         app:lineStyle="normal"/>
 
     <com.google.android.material.card.MaterialCardView
@@ -41,6 +37,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/timeline_date"
                 android:textSize="12sp"
+                android:textColor="@color/class_zero_background"
                 tools:text="24 JAN"/>
 
             <androidx.appcompat.widget.AppCompatTextView

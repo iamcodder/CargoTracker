@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.patronusstudio.cargotracker.R;
-import com.patronusstudio.cargotracker.Recycler.Adapter;
+import com.patronusstudio.cargotracker.Recycler.TimeLineAdapter;
 import com.patronusstudio.cargotracker.model.cargoes;
 import com.patronusstudio.cargotracker.model.cargoes_movement;
 import com.patronusstudio.cargotracker.model.outlet_center;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class CargoDetailed extends AppCompatActivity {
+public class CargoTimeline extends AppCompatActivity {
 
     private ArrayList<cargoes_movement> list;
     private target_center target_center;
@@ -27,7 +27,7 @@ public class CargoDetailed extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cargo_detailed);
+        setContentView(R.layout.activity_cargo_timeline);
 
         getData();
         sortList();
@@ -50,7 +50,7 @@ public class CargoDetailed extends AppCompatActivity {
     private void recyclerSet(){
         RecyclerView timelineView=findViewById(R.id.timeline);
 
-        Adapter adapter=new Adapter(list);
+        TimeLineAdapter adapter=new TimeLineAdapter(list);
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
 
@@ -59,14 +59,7 @@ public class CargoDetailed extends AppCompatActivity {
     }
 
     private void getData() {
-        cargoes = getIntent().getExtras().getParcelable("cargoes");
-        outlet_center = getIntent().getExtras().getParcelable("outlet_center");
-        target_center = getIntent().getExtras().getParcelable("target_center");
         list = getIntent().getExtras().getParcelableArrayList("cargoes_movement");
-
-        getIntent().removeExtra("cargoes");
-        getIntent().removeExtra("outlet_center");
-        getIntent().removeExtra("target_center");
         getIntent().removeExtra("cargoes_movement");
     }
 

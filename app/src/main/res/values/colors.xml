@@ -8,4 +8,8 @@
     <color name="colorGrey50">#fafafa</color>
     <color name="colorLine">#2962FF</color>
 
+    <color name="class_zero_background">#7f040000</color>
+    <color name="transparent">#00000000</color>
+    <drawable name="class_zero_background">#7f040000</drawable>
+
 </resources>
