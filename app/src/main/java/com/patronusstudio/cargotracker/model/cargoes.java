@@ -62,6 +62,10 @@ public class cargoes implements Parcelable {
     @SerializedName("id")
     private String id;
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     protected cargoes(Parcel in) {
         cost = in.readString();
         status = in.readString();

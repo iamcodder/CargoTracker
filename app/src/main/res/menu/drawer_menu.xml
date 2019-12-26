@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+
+<item
+        android:id="@+id/nav_person"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="Profil Ayarları" />
+    <item
+        android:id="@+id/nav_cargo"
+        android:icon="@drawable/ic_credit_card_black_24dp"
+        android:title="Kargolar" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="Çıkış" />
+    </group>
+
+</menu>

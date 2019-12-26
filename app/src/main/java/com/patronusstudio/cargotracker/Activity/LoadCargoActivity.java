@@ -56,8 +56,11 @@ public class LoadCargoActivity extends AppCompatActivity implements modelSend.se
     }
 
     @Override
-    public void onBackPressed() {
+    public void errorMessage(String message) {
+        Toast.makeText(this,"Kargo bilgisi bulunamadı",Toast.LENGTH_SHORT).show();
+        finish();
     }
+
 
 
 }

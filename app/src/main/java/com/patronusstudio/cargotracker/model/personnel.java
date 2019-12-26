@@ -135,4 +135,44 @@ public class personnel implements Parcelable {
         dest.writeString(name);
         dest.writeInt(id);
     }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
+
+    public void setTc(String tc) {
+        this.tc = tc;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

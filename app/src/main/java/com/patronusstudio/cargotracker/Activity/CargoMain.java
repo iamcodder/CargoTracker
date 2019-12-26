@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.patronusstudio.cargotracker.R;
 import com.patronusstudio.cargotracker.model.cargoes;
 import com.patronusstudio.cargotracker.model.cargoes_movement;
@@ -63,6 +64,7 @@ public class CargoMain extends AppCompatActivity {
                 intent=new Intent(v.getContext(),CargoReceiver.class);
                 intent.putExtra("cargoes",cargoes);
                 startActivity(intent);
+                Animatoo.animateZoom(v.getContext());
             }
         });
         img_gonderici.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +73,7 @@ public class CargoMain extends AppCompatActivity {
                 intent=new Intent(v.getContext(),CargoSender.class);
                 intent.putExtra("cargoes",cargoes);
                 startActivity(intent);
+                Animatoo.animateZoom(v.getContext());
             }
         });
         img_kargo.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +84,7 @@ public class CargoMain extends AppCompatActivity {
                 intent.putExtra("outlet_center",outlet_center);
                 intent.putExtra("target_center",target_center);
                 startActivity(intent);
+                Animatoo.animateZoom(v.getContext());
             }
         });
         img_son_durum.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +93,7 @@ public class CargoMain extends AppCompatActivity {
                 intent=new Intent(v.getContext(),CargoTimeline.class);
                 intent.putParcelableArrayListExtra("cargoes_movement",list);
                 startActivity(intent);
+                Animatoo.animateZoom(v.getContext());
             }
         });
     }

@@ -11,7 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.UserHome"></activity>
+        <activity android:name=".Fragment.CargoDetailLoad"
+            android:theme="@style/TransparentCompat" ></activity>
+        <activity
+            android:name=".Fragment.CargoDetail"
+            android:theme="@style/TransparentCompat" />
+        <activity
+            android:name=".Fragment.ProfileLoad"
+            android:theme="@style/TransparentCompat" />
+        <activity android:name=".Activity.UserHome" />
         <activity
             android:name=".Activity.UserLoginActivity"
             android:theme="@style/TransparentCompat" />
