@@ -27,7 +27,7 @@ public interface JsonApi {
     Call<responseUserSave> setUser(@Query("id")String id,
                                    @Query("sifre")String sifre,
                                    @Query("email")String email,
-                                   @Query("adres")String adres);
+                                   @Query("telefon")String telefon);
 
     @GET("android/fetchCargoes.php")
     Call<List<cargoes>> tumKargoDondur();

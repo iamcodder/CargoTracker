@@ -33,6 +33,7 @@ public class RetrofitObj {
     savePersonel savePersonel;
     updateStatus updateStatus;
 
+
     public RetrofitObj(@NonNull send modelSend) {
         this.modelSend = modelSend;
     }
@@ -93,7 +94,6 @@ public class RetrofitObj {
                     personnel personnel = response.body();
                     if (personnel != null)
                         modelSendUser.sendUser(personnel);
-
                 }
             }
 
@@ -110,7 +110,7 @@ public class RetrofitObj {
         Call<responseUserSave> call=jsonApi.setUser(user.getId()+"",
                 user.getPassword(),
                 user.getEmail(),
-                user.getAddress());
+                user.getPhone());
 
         call.enqueue(new Callback<responseUserSave>() {
             @Override

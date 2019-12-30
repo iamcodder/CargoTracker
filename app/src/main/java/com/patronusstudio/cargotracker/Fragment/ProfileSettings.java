@@ -67,7 +67,7 @@ public class ProfileSettings extends Fragment {
     }
 
     private void setData(){
-        edx_adres.setText(user.getAddress());
+        edx_adres.setText(user.getPhone());
         edx_sifre.setText(user.getPassword());
         edx_email.setText(user.getEmail());
         txt_isim.setText(user.getName()+" "+user.getSurname());

@@ -80,7 +80,6 @@ public class UserLoginActivity extends AppCompatActivity implements modelSend.se
 
     }
 
-
     @Override
     public void errorMessage(@NonNull String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
@@ -96,7 +95,14 @@ public class UserLoginActivity extends AppCompatActivity implements modelSend.se
     }
 
     private void kontrolEt() {
-        if (sayac == 2) {
+
+        if(user.getActive()==0){
+            Toast.makeText(this,"Lütfen mailinizdn onaylayın",Toast.LENGTH_SHORT).show();
+            lottieAnimationView.pauseAnimation();
+            lottieAnimationView.setVisibility(View.GONE);
+        }
+
+        else if (sayac == 2 && user.getActive()==1) {
             sayac = 0;
             lottieAnimationView.pauseAnimation();
             lottieAnimationView.setVisibility(View.GONE);

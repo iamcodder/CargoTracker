@@ -17,30 +17,91 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/recyc_takip_numarası"
-            android:text="Takip Numarası :"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/recyc_ad_soyaad"
-            android:text="Alıcı Ad Soyad : "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_find_in_page_black_24dp"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/recyc_adres"
-            android:text="Alıcı Adresi : "
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recyc_takip_numarası"
+                android:text="Takip Numarası :"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/recyc_kargo"
-            android:text="Kargo Durumu : "
-            android:gravity="end"
+        </LinearLayout>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_person_black_24dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recyc_ad_soyaad"
+                android:text="Alıcı Ad Soyad : "
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_home_black_24dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recyc_adres"
+                android:text="Alıcı Adresi : "
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toStartOf="@id/recyc_kargo"
+                android:src="@drawable/ic_local_shipping_black_24dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/recyc_kargo"
+                android:text="Kargo Durumu : "
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"/>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

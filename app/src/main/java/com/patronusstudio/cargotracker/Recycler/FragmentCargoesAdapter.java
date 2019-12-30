@@ -37,8 +37,10 @@ public class FragmentCargoesAdapter extends RecyclerView.Adapter<FragmentCargoes
     public void onBindViewHolder(@NonNull viewHolder holder, final int position) {
 
         holder.takip_numarası.setText("TNO : "+list.get(position).getTracking_number());
-        holder.alıcı_ad_soyad.setText("Alıcı Adresi: "+list.get(position).getReceiver_name() + " " + list.get(position).getReceiver_surname());
-        holder.alıcı_adresi.setText("Alıcı : "+list.get(position).getReceiver_address());
+        holder.alıcı_ad_soyad.setText("Alıcı Adresi : "+list.get(position).getReceiver_address());
+        holder.alıcı_adresi.setText("Alıcı : " +list.get(position).getReceiver_name() + " " + list.get(position).getReceiver_surname());
+
+
 
         String pos = list.get(position).getStatus();
         String status = "";
